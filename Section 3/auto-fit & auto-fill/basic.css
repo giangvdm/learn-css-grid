@@ -1,0 +1,28 @@
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container1, .container2 {
+    margin: 20px;
+    border: 1px solid black;
+}
+
+.container1 > div, .container2 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1 > div:nth-child(1n), .container2 > div:nth-child(1n) {
+    background-color: lightgray;
+}
+
+.container1 > div:nth-child(2n), .container2 > div:nth-child(2n) {
+    background-color: gray;
+}
+
+.container1 > div:nth-child(3n), .container2 > div:nth-child(3n) {
+    color: white;
+    background-color: black;
+}

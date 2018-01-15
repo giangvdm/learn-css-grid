@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>An awesome article</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <!-- Basic and general styling -->
+    <link rel="stylesheet" href="assets/css/basic.css">
+    <!-- CSS Grid -->
+    <link rel="stylesheet" href="assets/css/grid.css">
+</head>
+
+<body>
+    <article>
+        <h1>Learn CSS flexbox in 5 minutes</h1>
+        <h2>A quick introduction to the popular layout module</h2>
+
+        <img class="heading-img" src="assets/images/heading-img.png" alt="">
+
+        <p>In this post you’ll learn the basics of CSS Flexbox, which has become a must-have skill for web developers and designers
+            the last couple of years.</p>
+
+        <p>We’ll be using a navbar as an example, as this is a very typical use case for Flexbox. This will introduce you to
+            its most-used properties of the module, while leaving out the ones which aren’t as critical.</p>
+
+        <p>I’m also creating a free course on Flexbox. If you want early access you can leave your email
+            <a href="https://scrimba.us15.list-manage.com/subscribe?u=10450f0bf33954eccf470afb4&id=e112c9e0e3" target="_blank">here</a>
+            and I’ll send it to you once it’s ready.</p>
+
+        <p>Now let’s get started!</p>
+
+        <h3 class="section-header">Your first Flexbox layout</h3>
+
+        <p>The two main components of a Flexbox layout are the
+            <strong>container</strong> and the
+            <strong>items</strong>.</p>
+
+        <p>Here’s the HTML for our example, which contains a container with four items:</p>
+
+        <code class="code-example">
+            <pre>
+                &lt;nav class="container"&gt;
+                    &lt;div&gt;Home&lt;/div&gt;
+                    &lt;div&gt;Search&lt;/div&gt;
+                    &lt;div&gt;Logout&lt;/div&gt;
+                &lt;/nav&gt;</pre>
+        </code>
+
+        <p>Before we turn this into a Flexbox layout the divs would be stacked on top of each other like this:</p>
+
+        <figure>
+            <img src="assets/images/simple-styling-without-flexbox.png" alt="">
+            <figcaption>I’ve added a little bit of styling, but that has nothing to do with Flexbox.</figcaption>
+        </figure>
+
+        <p>To turn this into a Flexbox layout we’ll simply give the
+            <strong>container</strong> the following CSS property:</p>
+
+        <code class="code-example">
+            <pre>
+                .container {
+                    display: flex;
+                }</pre>
+        </code>
+
+        <p>This will automatically position the items nicely along the horizontal axis.</p>
+
+        <figure>
+            <img src="assets/images/with-flexbox.png" alt="">
+        </figure>
+
+        <p>If you want to check out the actual code, you can head over to
+            <a href="https://scrimba.com/c/c3zpnuB" target="_blank">this Scrimba playground</a>.</p>
+
+        <p>Now let’s shuffle these items around a bit.</p>
+
+        <h3 class="section-header">Justify content and Align items</h3>
+
+        <p>
+            <strong>Justify-content</strong> and
+            <strong>align-items</strong> are two CSS properties which help us distribute the items in the container. They control
+            how the items are positioned along the
+            <strong>main axis</strong> and
+            <strong>cross axis</strong>.</p>
+
+        <p>In our case (but not always) the main axis is horizontal and the cross axis is vertical:</p>
+
+        <figure>
+            <img src="assets/images/main-and-cross-axis.png" alt="">
+        </figure>
+
+        <p>In this article, we’ll only look at
+            <code>justify-content</code>, as I’ve found to be using this one much more than
+            <code>align-items</code>. However, in my upcoming course, I’ll be going through both properties in detail.</p>
+
+        <p>Let’s center all the items along the
+            <strong>main axis</strong> by using
+            <code>justify-content</code>:</p>
+
+        <code class="code-example">
+            <pre>
+                .container {
+                    display: flex;
+                    justify-content: center;
+                }</pre>
+        </code>
+
+        <figure>
+            <img src="assets/images/center-navbar.png" alt="">
+        </figure>
+
+        <p>Or we can set it to
+            <code>space-between</code>, which will add space between the items, like this:</p>
+
+        <code class="code-example">
+            <pre>
+                .container {
+                    display: flex;
+                    justify-content: space-between;
+                }</pre>
+        </code>
+
+        <figure>
+            <img src="assets/images/space-between-navbar.png" alt="">
+        </figure>
+
+        <p>Here are the values you can set for
+            <code>justify-content</code>:</p>
+
+        <p class="aside">
+            These values can also be set for
+            <code>align-content</code>
+        </p>
+
+        <ul class="article-list">
+            <li>
+                flex-start (
+                <strong>default</strong> )
+            </li>
+            <li>flex-end</li>
+            <li>center</li>
+            <li>space-between</li>
+            <li>space-around</li>
+            <li>space-evenly</li>
+        </ul>
+
+        <p>I’d recommend you to play around with these and see how they play out on the page. That should give you a proper
+            understanding of the concept.</p>
+
+        <h3 class="section-header">Controlling a single item</h3>
+
+        <p>We can also control single items. Let’s say we for example want to keep the first two items on the left side, but
+            move the
+            <code>logout</code> button to the right side.</p>
+
+        <p>To do this we’ll use the good old technique of setting the margin to
+            <code>auto</code>.</p>
+
+        <code class="code-example">
+            <pre>
+                .logout {
+                    margin-left: auto;
+                }</pre>
+        </code>
+
+        <figure>
+            <img src="assets/images/logout-to-the-right.png" alt="">
+        </figure>
+
+        <p>If we’d want both the
+            <code>search</code> item and the
+            <code>logout</code> item to be pushed to the right hand side, we’ll simply add the
+            <code>margin-left</code> to the
+            <code>search</code> item instead.</p>
+
+        <code class="code-example">
+            <pre>
+                .search {
+                    margin-left: auto;
+                }</pre>
+        </code>
+
+        <p>It’ll push the search item as far to the right hand side as possible, which again will push the logout item with
+            it:
+        </p>
+
+        <figure>
+            <img src="assets/images/search-and-logout-to-the-right.png" alt="">
+        </figure>
+
+        <h3 class="section-header">The flex property</h3>
+
+        <p>So far, we’ve only had fixed-width items. But what if we want them to be responsive? To achieve that we have a property
+            called
+            <code>flex</code>. It makes it a lot easier than the old way of using percentages.</p>
+
+        <p>We’ll simply target all the items and give them a
+            <code>flex</code> value of
+            <code>1</code>.</p>
+
+        <code class="code-example">
+            <pre>
+                .container > div {
+                    flex: 1;
+                }</pre>
+        </code>
+
+        <figure>
+            <img src="assets/images/responsive-flex-navbar.png" alt="">
+        </figure>
+
+        <p>As you can see, it stretches the items to fill the entire container.</p>
+
+        <p>In many cases you’d probably want one of the items to take up the extra width, and thereby only set one if them to
+            have flexible width. We can for example make the
+            <code>search</code> item take up all the extra space:</p>
+
+        <code class="code-example">
+            <pre>
+                .search {
+                    flex: 1;
+                }</pre>
+        </code>
+
+        <figure>
+            <img src="assets/images/wide-search.png" alt="">
+        </figure>
+
+        <p>Before we end this article, I want to mention that the flex property is actually a shorthand three properties:
+            <strong>flex-grow</strong>,
+            <strong>flex-shrink</strong> and
+            <strong>flex-basis</strong>. However, learning those takes more than five minutes, so it’s outside of the scope of this
+            tutorial.
+        </p>
+
+        <p>If you’re interested in learning them, though, I’ll be explaining all three properties thoroughly in my upcoming
+            course. Now that you’ve learned the basics you’ll definitely be ready to take my full-length course and become
+            a Flexbox master.</p>
+
+        <p>I’m creating a free CSS Flexbox course. If you want early access, just leave your email here and I’ll give you early
+            access once the course is ready.</p>
+
+        <div>
+            <ul class="article-tags">
+                <li>CSS</li>
+                <li>Responsive Design</li>
+                <li>Software Development</li>
+                <li>Tech</li>
+                <li>Coding</li>
+            </ul>
+        </div>
+    </article>
+</body>
+
+</html>

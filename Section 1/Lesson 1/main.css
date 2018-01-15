@@ -1,0 +1,19 @@
+.container {
+    display: grid;
+    grid-template-rows: 100% 200px;
+    grid-template-columns: 300px auto 300px;
+    grid-gap: 5px;
+}
+
+.container div {
+    padding: 10px;
+}
+
+.container div:nth-child(2n+1) {
+    background-color: black;
+    color: white;
+}
+
+.container div:nth-child(2n) {
+    background-color: lightgray;
+}

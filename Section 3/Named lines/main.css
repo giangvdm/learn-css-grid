@@ -1,0 +1,40 @@
+.container {
+    display: grid;
+    grid-template-columns: [main-start] 1fr [cont-start] 5fr [cont-end main-end];
+    grid-template-rows: [main-start] 1fr [cont-start] 4fr [cont-end] 1fr [main-end];
+    grid-gap: 5px;
+}
+
+.container > div {
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container div:nth-child(2n+1) {
+    background-color: black;
+    color: white;
+}
+
+.container div:nth-child(2n) {
+    background-color: lightgray;
+}
+
+#header {
+    grid-column: main-start / main-end;
+}
+
+#menu {
+    /* grid-column: 2 / -1; */
+}
+
+#content {
+    grid-area: cont;
+}
+
+#footer {
+    grid-column: main;
+}

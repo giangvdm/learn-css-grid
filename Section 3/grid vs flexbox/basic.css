@@ -1,0 +1,34 @@
+h2 {
+    text-align: center;
+}
+
+.flexbox-header {
+    background-color: gray;
+    color: white;
+}
+
+.flexbox-header > div {
+    padding: 10px;
+}
+
+.grid-page {
+
+}
+
+.grid-page > div {
+    display: flex;
+    align-items: center;
+}
+
+.grid-page > div:nth-child(1n) {
+    background-color: lightgray;
+}
+
+.grid-page > div:nth-child(2n) {
+    background-color: gray;
+}
+
+.grid-page > div:nth-child(3n) {
+    color: white;
+    background-color: black;
+}

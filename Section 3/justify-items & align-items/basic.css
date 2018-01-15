@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+}
+
+.container {
+    margin: 20px;
+}
+
+.container > div {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.container > div:nth-child(1n) {
+    background-color: lightgray;
+}
+
+.container > div:nth-child(2n) {
+    background-color: gray;
+}
+
+.container > div:nth-child(3n) {
+    color: white;
+    background-color: black;
+}

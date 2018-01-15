@@ -1,0 +1,81 @@
+/* General styling */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: 'Lato', 'sans-serif';
+    font-size: 18px;
+}
+
+body {
+    margin: 0 100px;
+}
+
+h1 {
+    text-transform: capitalize;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-weight: 400;
+    color: #666;
+    margin-top: 10px;
+}
+
+h3.section-header {
+    margin: 3em 0 0;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+p {
+    margin: 1.5em 0 0;
+}
+
+p > code {
+    background-color: #e6e6e6;
+    padding: 3px;
+}
+
+figcaption {
+    font-size: 0.8em;
+    color: #666;
+    /* text-align: center; */
+}
+
+code.code-example > pre {
+    background-color: #e6e6e6;
+    padding: 20px 0;
+}
+
+.article-list > li{
+    margin-bottom: 20px;
+}
+
+.article-list > li:last-child {
+    margin: initial;
+}
+
+.article-tags {
+    list-style-type: none;
+}
+
+.article-tags > li {
+    display: inline-block;
+    font-size: 0.8em;
+    color: #666;
+    background-color: #e6e6e6;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 0 5px 5px 0;
+}
+
+/* */

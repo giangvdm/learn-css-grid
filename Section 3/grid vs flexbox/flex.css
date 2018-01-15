@@ -1,0 +1,7 @@
+.flexbox-header {
+    display: flex; /* that's all */
+}
+
+.flexbox-header > div:last-child {
+    margin-left: auto; /* margin-left magic trick that pushes the div to the right */
+}
